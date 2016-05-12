@@ -1,0 +1,34 @@
+<div class="tops">
+  <%=  image_tag "tops_running.jpg", :name=>"exercise",:class => "exercise_image" %>
+
+  <script>
+    img = new Array("/assets/tops_running.jpg","/assets/tops_swimming.jpg","/assets/tops_walking.jpg"); //*1
+    count = -1; //*2
+    imgTimer();
+  </script>
+
+  <div class="description">
+    <div class="concept">
+      <h1>あなたの健康を支援する新しい保険</h1>
+      <p>「リスク」に備える、だけでなく</br>「リスク」を減らす。</p>
+    </div>
+    <div class="system">
+      <h1>あなたの「１歩」が保険料を安くする</h1>
+      <p>従来の保険のような一律料金ではなく、日々の歩数や運動を記録を基にあなたに最適な保険を提供します。</p>
+    </div>
+    <div class="support">
+      <h1>充実の健康増進支援サービス</h1>
+      <h2>1. 日々の行動記録から生活スタイルを改善</h2>
+      <p>日々のライフログが可視化されるので、理想の運動量と比較ができます。</p>
+      <ul class="clearFix">
+        <li><%= image_tag "line_graph.png" %></li>
+        <li><%= image_tag "pie_chart.png" %></li>
+      </ul>
+      <h2>2. ジム・フィットネス割引特典</h2>
+      <p>Fit会員限定の特典を多数掲載。ジムやヨガ教室、スイミングスクール等、多様なコースをご用意しているのでに合った運動を割引価格でご利用できます。</p>
+      <h2>3. 人間ドックや検診もお得に・気軽に</h2>
+      <p>面倒な人間ドックや検診もFitサイト内で検索・予約・結果閲覧まで一気通貫で行えます。勿論、会員限定特典もあるのでお得にご自身の日々の努力を確認して下さい。</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,86 @@
+<h1 class="page_title">フィットネスを探す</h1>
+
+<div class="area">
+  <dl>
+    <dt><strong>場所で検索</strong></dt>
+    <!-- <dd class="description">ご希望のエリアをクリックしてください。</dd> -->
+    <dd class="map">
+      <%= image_tag 'map.gif' , :usemap => "mapArea" %>
+      <map name="mapArea" id="mapArea">
+        <area shape="poly" coords="258,1,316,1,301,32,270,32,268,35,241,35" href ="/fitnesses/results?place=北海道" alt="北海道" title="北海道エリア">
+        <area shape="poly" coords="240,38,285,38,263,81,229,81,238,65,227,65" href="/fitnesses/results?place=東北" alt="東北" title="東北エリア">
+        <area shape="poly" coords="218,83,263,83,244,122,226,122,229,116,201,116" href="/fitnesses/results?place=関東" alt="関東" title="関東エリア">
+        <area shape="poly" coords="172,67,190,67,188,73,222,73,226,66,236,66,229,81,217,81,208,101,182,101,187,89,161,89" href="/fitnesses/results?place=北陸・信越" alt="北陸・信越" title="北陸・信越エリア">
+        <area shape="poly" coords="170,91,186,91,180,102,207,102,200,116,178,116,170,122,154,122" href="/fitnesses/results?place=東海" alt="東海" title="東海エリア">
+        <area shape="poly" coords="145,73,168,73,159,91,168,91,153,122,126,122,139,96,134,96" href="/fitnesses/results?place=近畿" alt="近畿" title="近畿エリア">
+        <area shape="poly" coords="103,73,144,73,132,96,91,96" href="/fitnesses/results?place=中国" alt="中国" title="中国エリア">
+        <area shape="poly" coords="93,98,132,98,121,122,81,122" href="/fitnesses/results?place=四国" alt="四国" title="四国エリア">
+        <area shape="poly" coords="60,73,101,73,73,128,41,128,57,95,48,95" href="/fitnesses/results?place=九州" alt="九州" title="九州エリア">
+        <area shape="poly" coords="12,112,39,112,31,128,4,128" href="/fitnesses/results?place=沖縄" alt="沖縄" title="沖縄エリア">
+      </map>
+    </dd>
+  </dl>
+</div>
+
+<div class="purpose">
+  <dl>
+    <dt><strong>目的/運動で検索</strong></dt>
+    <!-- <dd>ご希望の目的/運動をクリックしてください</dd> -->
+    <dd class="category">
+      <div>
+        <h1>目的</h1>
+        <ul class="mokuteki_betsu clearFix">
+          <li><%= link_to image_tag('diet.png'), results_fitnesses_path(purpose: 'ダイエット') %>
+            <p><%= link_to 'ダイエット', results_fitnesses_path(purpose: 'ダイエット') %></p>
+          </li>
+          <li><%= link_to image_tag('healthy.png'), results_fitnesses_path(purpose: ' 健康維持') %>
+            <p><%= link_to '健康維持', results_fitnesses_path(purpose: '健康維持') %></p>
+          </li>
+          <li><%= link_to image_tag('muscle.png'), results_fitnesses_path(purpose: '筋力向上') %>
+            <p><%= link_to '筋力向上', results_fitnesses_path(purpose: '筋力向上') %></p>
+          </li>
+          <li><%= link_to image_tag('stress.png'), results_fitnesses_path(purpose: 'ストレス解消') %>
+            <p><%= link_to 'ストレス解消', results_fitnesses_path(purpose: 'ストレス解消') %></p>
+          </li>
+          <li><%= link_to image_tag('refresh.png'), results_fitnesses_path(purpose: '疲労回復') %>
+            <p><%= link_to '疲労回復', results_fitnesses_path(purpose: '疲労回復') %></p>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h1>運動</h1>
+        <ul class="houhou_betsu clearFix">
+          <li><%= link_to image_tag('swimming.png'), results_fitnesses_path(purpose: '水泳') %>
+            <p><%= link_to '水泳', results_fitnesses_path(purpose: '水泳') %></p>
+          </li>
+          <li><%= link_to image_tag('walking.png'), results_fitnesses_path(purpose: 'ウォーキング') %>
+            <p><%= link_to 'ウォーキング', results_fitnesses_path(purpose: 'ウォーキング') %></p>
+          </li>
+          <li><%= link_to image_tag('running.png'), results_fitnesses_path(purpose: 'ランニング') %>
+            <p><%= link_to 'ランニング', results_fitnesses_path(purpose: 'ランニング') %></p>
+          </li>
+          <li><%= link_to image_tag('yoga.png'), results_fitnesses_path(purpose: 'ヨガ') %>
+            <p><%= link_to 'ヨガ', results_fitnesses_path(purpose: 'ヨガ') %></p>
+          </li>
+          <li><%= link_to image_tag('trainning.png'), results_fitnesses_path(purpose: '筋トレ') %>
+            <p><%= link_to '筋トレ', results_fitnesses_path(purpose: '筋トレ') %></p>
+          </li>
+        </ul>
+      </div>
+    </dd>
+  </dl>
+</div>
+
+<div class="keyword">
+  <dl>
+    <dt><strong>キーワードで検索</strong></dt>
+    <dd>
+      <%= form_tag('/fitnesses/results', method: :get) do %>
+      <input class="search__query" name="keyword" placeholder="キーワードで検索" type="text" value="">
+        <button class="btn-search" title="検索" type="submit">検索</button>
+      </input>
+      <% end %>
+    </dd>
+  </dl>
+</div>

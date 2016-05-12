@@ -1,0 +1,37 @@
+<div class="registration_health_status">
+  <h2>新規加入</h2>
+  <div class="title_registration"><p>登録情報記入(2)</p></div>
+  <div class="form_box">
+    <%= form_for @health_status do |f| %>
+      <div class="field">
+        <p>身長</p>
+        <%= f.text_field :height, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <p>体重</p>
+        <%= f.text_field :weight, autofocus: true %>
+      </div>
+
+      <div class="text_area">
+        <p>現在、持病があればその病名を記述してください。お持ちでなければ「なし」とご記入ください。</p>
+        <%= f.text_area :illness, autofocus: true, :placeholer =>"例)" %>
+      </div>
+
+      <p>以降は、分かる範囲でご記入ください。</p>
+      <div class="field">
+        <p>体脂肪率</p>
+        <%= f.text_field :fat_percentage, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <p>血圧</p>
+        <%= f.text_field :blood_pressure, autofocus: true %>
+      </div>
+
+      <div class="submit">
+        <%= f.submit "新規登録" , :class => "button" %>
+      </div>
+    <% end %>
+  </div>
+</div>

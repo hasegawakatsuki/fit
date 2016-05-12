@@ -1,0 +1,16 @@
+<div class="results_checkup">
+  <% if params[:place].present? %>
+    <h1 class="page_title"><%= params[:place] %>での検索結果 <%= @hits_num %>件</h1>
+  <% elsif params[:purpose].present? %>
+    <h1 class="page_title">"<%= params[:purpose] %>"での検索結果 <%= @hits_num %>件</h1>
+  <% elsif params[:keyword].present? %>
+    <h1 class="page_title"><%= params[:keyword] %>での検索結果 <%= @hits_num %>件</h1>
+  <% elsif params[:keyword].empty? %>
+    <h1 class="page_title">"<%= params[:keyword] %>"での検索結果 <%= @hits_num %>件</h1>
+  <% end %>
+  <div class="contents">
+    <% @checkups.each do |checkup| %>
+      <%= render partial: "checkup", locals: {checkup: checkup} %>
+    <% end %>
+  </div>
+</div>

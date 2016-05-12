@@ -1,0 +1,16 @@
+<div class="fitness_content">
+  <div class="link_box">
+  <%= link_to "#{fitness.name}", "/fitnesses/#{fitness.id}", method: :get %>
+    <div class="fitness_image" style="background-image:url(<%= fitness.image_url %>)"></div>
+    <div class="content">
+      <h1 class="name"><%= fitness.name %></h1>
+      <div class="price">
+        <p>料金 : <strong class="price_fitness"><%= fitness.price %></strong> 円〜</p>
+      </div>
+      <div class="access">
+        <p>アクセス : <%= fitness.company.access %></p>
+      </div>
+      <p class="coupon">会員限定特典あり</p>
+    </div>
+  </div>
+</div>

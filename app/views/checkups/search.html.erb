@@ -1,0 +1,84 @@
+<h1 class="page_title">人間ドックを探す</h1>
+<div class="area">
+  <dl>
+    <dt><strong>場所で検索</strong></dt>
+    <!-- <dd class="description">ご希望のエリアをクリックしてください。</dd> -->
+    <dd class="map">
+      <%= image_tag 'map.gif' , :usemap => "mapArea" %>
+      <map name="mapArea" id="mapArea">
+        <area shape="poly" coords="258,1,316,1,301,32,270,32,268,35,241,35" href ="/checkups/results?place=北海道" alt="北海道" title="北海道エリア">
+        <area shape="poly" coords="240,38,285,38,263,81,229,81,238,65,227,65" href="/checkups/results?place=東北" alt="東北" title="東北エリア">
+        <area shape="poly" coords="218,83,263,83,244,122,226,122,229,116,201,116" href="/checkups/results?place=関東" alt="関東" title="関東エリア">
+        <area shape="poly" coords="172,67,190,67,188,73,222,73,226,66,236,66,229,81,217,81,208,101,182,101,187,89,161,89" href="/checkups/results?place=北陸・信越" alt="北陸・信越" title="北陸・信越エリア">
+        <area shape="poly" coords="170,91,186,91,180,102,207,102,200,116,178,116,170,122,154,122" href="/checkups/results?place=東海" alt="東海" title="東海エリア">
+        <area shape="poly" coords="145,73,168,73,159,91,168,91,153,122,126,122,139,96,134,96" href="/checkups/results?place=近畿" alt="近畿" title="近畿エリア">
+        <area shape="poly" coords="103,73,144,73,132,96,91,96" href="/checkups/results?place=中国" alt="中国" title="中国エリア">
+        <area shape="poly" coords="93,98,132,98,121,122,81,122" href="/checkups/results?place=四国" alt="四国" title="四国エリア">
+        <area shape="poly" coords="60,73,101,73,73,128,41,128,57,95,48,95" href="/checkups/results?place=九州" alt="九州" title="九州エリア">
+        <area shape="poly" coords="12,112,39,112,31,128,4,128" href="/checkups/results?place=沖縄" alt="沖縄" title="沖縄エリア">
+      </map>
+    </dd>
+  </dl>
+</div>
+
+
+<div class="purpose">
+  <dl>
+    <dt><strong>検査コース/検査方法で検索</strong></dt>
+    <!-- <dd>ご希望のコース/方法をクリックしてください</dd> -->
+    <dd class="category clearFix">
+      <div>
+        <h1>検査コース</h1>
+        <ul class="mokuteki_betsu clearFix">
+          <li><%= link_to image_tag('all-dock.png'), results_checkups_path(purpose: '全身ドック') %>
+            <p><%= link_to '全身ドック', results_checkups_path(purpose: '全身ドック') %></p>
+          </li>
+          <li><%= link_to image_tag('brain.png'), results_checkups_path(purpose: '脳ドック') %>
+            <p><%= link_to '脳ドック', results_checkups_path(purpose: '脳ドック') %></p>
+          </li>
+          <li><%= link_to image_tag('heart.png'), results_checkups_path(purpose: '心臓ドック') %>
+            <p><%= link_to '心臓ドック', results_checkups_path(purpose: '心臓ドック') %></p>
+          </li>
+          <li><%= link_to image_tag('pregnant.png'), results_checkups_path(purpose: '婦人科検診') %>
+            <p><%= link_to '婦人科検診', results_checkups_path(purpose: '婦人科検診') %></p>
+          <li><%= link_to image_tag('cancer.png'), results_checkups_path(purpose: 'ガン検診') %>
+            <p><%= link_to 'ガン検診', results_checkups_path(purpose: 'ガン検診') %></p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1>検査方法</h1>
+        <ul class="houhou_betsu clearFix">
+          <li><%= link_to image_tag('stomach.png'), results_checkups_path(purpose: '胃カメラ') %>
+            <p><%= link_to '胃カメラ', results_checkups_path(purpose: '胃カメラ') %></p>
+          </li>
+          <li><%= link_to image_tag('ct.png'), results_checkups_path(purpose: 'CTスキャン') %>
+            <p><%= link_to 'CTスキャン', results_checkups_path(purpose: 'CTスキャン') %></p>
+          </li>
+          <li><%= link_to image_tag('pet.png'), results_checkups_path(purpose: 'PET') %>
+            <p><%= link_to 'PET', results_checkups_path(purpose: 'PET') %></p>
+          </li>
+          <li><%= link_to image_tag('mri.png'), results_checkups_path(purpose: 'MRI') %>
+            <p><%= link_to 'MRI', results_checkups_path(purpose: 'MRI') %></p>
+          </li>
+          <li><%= link_to image_tag('blood.png'), results_checkups_path(purpose: '血液検査') %>
+            <p><%= link_to '血液検査', results_checkups_path(purpose: '血液検査') %></p>
+          </li>
+        </ul>
+      </div>
+    </dd>
+  </dl>
+</div>
+
+<div class="keyword">
+  <dl>
+    <dt><strong>キーワードで検索</strong></dt>
+    <dd>
+      <%= form_tag('/checkups/results', method: :get) do %>
+      <input class="search__query" name="keyword" placeholder="キーワードで検索" type="text" value="">
+        <button class="btn-search" title="検索" type="submit">検索</button>
+      </input>
+      <% end %>
+    </dd>
+  </dl>
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fit</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport"
+    content="width=320,
+    height=480,
+    initial-scale=1.0,
+    minimum-scale=1.0,
+    maximum-scale=2.0,
+    user-scalable=yes" />
+
+</head>
+<body>
+<header class="tops_header">
+    <ul class="clearFix">
+      <li class="nav_request">
+          <%= link_to '資料請求', new_user_session_path %>
+      </li>
+      <li class="nav_registration">
+        <%= link_to '新規加入', new_user_registration_path %>
+      </li>
+      <li class="nav_login">
+        <%= link_to 'ログイン', new_user_session_path %>
+      </li>
+    </ul>
+    <div class="fit_logo">
+      <%= image_tag 'logo.png', :class => "logo_image" %>
+    </div>
+</header>
+
+<%= yield %>
+
+
+  <footer>
+    <div class="copyright">
+      Copyright (C) 2015  hasegawa Corporation. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

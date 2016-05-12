@@ -1,0 +1,1370 @@
+body, html {
+  height: 100%;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  font-size: 18px;
+  color: #555;
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+header{
+  background-color: #60a0cc;
+  margin: 0;
+  padding: 5px;
+}
+
+header h1{
+  text-align: center;
+  a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    // img{
+    //   height:35px;
+    // }
+  }
+}
+
+
+.nav {
+  ul {
+    width:auto;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    li{
+      width: 20%; /* 項目の幅 */
+      float: left;
+      padding:0;
+      margin:0;
+      text-align: center;
+      a{
+        width:auto;
+        color: #555;
+        font-size: 10px;
+        font-weight:bold;
+        text-decoration: none;
+        padding:10px 0;
+        text-decoration:none;
+        display:block;
+        background: #fff;
+        border: 1px solid #aaa;
+          box-shadow: 1px 0px 0px rgba(225,225,225,0.3) inset,
+               -1px 0px 0px rgba(225,225,225,0.3) inset,
+                0px 1px 1px rgba(0,0,0,0.1) inset,
+                0px -1px 1px rgba(0,0,0,0.3) inset,
+                0px 1px 3px #666;
+      }
+    }
+  }
+}
+.nav ul li a:hover{
+  background:#ddd;
+}
+
+.clearFix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.clearFix {
+min-height: 1px;
+}
+
+
+.tops_header{
+  margin:0;
+  padding:0;
+  background-color: white;
+  ul {
+    width:auto;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    li{
+      width: 1/3*100%; /* 項目の幅 */
+      float: left;
+      padding:0;
+      margin:0;
+      text-align: center;
+      border:none;
+      a{
+        width:auto;
+        color: white;
+        font-size: 16px;
+        font-weight:bold;
+        text-decoration: none;
+        padding:15px 0;
+        text-decoration:none;
+        display:block;
+      }
+      a:hover{
+        background:#ddd;
+      }
+    }
+    .nav_request{
+      // background-color: #60a0aa;
+      background-color: #20B2AA;
+    }
+    .nav_registration{
+      background-color: #60a0cc;
+    }
+    .nav_login{
+      // background-color: #4080cc;
+      // background-color: #252570;
+      background-color: #33338B;
+
+    }
+  }
+  .clearFix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+  .clearFix {
+  min-height: 1px;
+  }
+  .fit_logo{
+    margin: 20px 0 10px 0;
+    text-align: center;
+    .logo_image{
+      height: 50px;
+    }
+  }
+}
+
+
+footer{
+  background-color: #60a0cc;
+  margin: 0;
+  padding: 5px;
+  margin: 30px 0 0 0;
+  .copyright{
+    text-align: center;
+    font-size: 10px;
+    color: white;
+  }
+}
+
+
+.tops{
+  .exercise_image{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .description{
+    margin: 10px 0 0 5px;
+    .concept{
+      h1{
+        color:#33338B;
+        font-size: 19px;
+      }
+      p{
+        font-size: 16px;
+        margin: 0 10px 0 5px;
+      }
+    }
+    .system{
+      h1{
+        color:#33338B;
+        font-size: 19px;
+      }
+      p{
+        font-size: 16px;
+        margin: 0 10px 0 5px;
+      }
+    }
+    .support{
+      h1{
+        color:#33338B;
+        font-size: 19px;
+      }
+      h2{
+        font-size: 16px;
+        font-weight:normal;
+        margin: 0 10px 0 5px;
+      }
+      p{
+        font-size: 16px;
+        margin: 0 10px 0 20px;
+      }
+      .clearFix{
+        padding:0;
+        list-style-type:none;
+        li{
+          float:left;
+          width:50%;
+          height: 130px;
+          text-align: center;
+          img{
+          height:90%;
+          }
+        }
+      }
+      .clearFix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+      .clearFix {
+        min-height: 1px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.log_in{
+  width:100%;
+  text-align: center;
+  h2{
+    margin:30px 0 0 0;
+  }
+  form{
+    .field{
+      input{
+        height: 25px;
+        width: 300px;
+        margin:20px 0 0 0;
+        border: 0.1px solid #ddd;
+      }
+    }
+    .row{
+      .remember{
+        width: 300px;
+        margin: auto;
+        padding: 0;
+        text-align: left;
+        .label{
+          font-size: 12px
+        }
+      }
+      .submit{
+        margin:20px 0 0 0;
+        padding: 0;
+        .button{
+          width: 300px;
+          height: 30px;
+          color: #fff;
+          background-color: #00216f;
+          text-align: center;
+          border-style: none;
+          border-radius: 8px;
+          -moz-border-radius: 8px;
+          -webkit-border-radius: 8px;
+          cursor:pointer;
+        }
+        .button:hover{
+          opacity:0.7;
+        }
+      }
+    }
+  }
+  .more_link_box{
+    width:300px;
+    margin: 10px auto;
+    text-align: left;
+    a{
+      text-decoration: none;
+      color: #555;
+      font-size: 15px;
+    }
+    a:hover{
+      color: #999;
+    }
+  }
+}
+
+.registration{
+  width:100%;
+  text-align: center;
+  h2{
+    margin:20px 0 0 0;
+  }
+  .title_registration{
+    border-bottom: 3px solid #60a0cc;
+    text-align: left;
+    p{
+      margin: 0 auto 0 10px;
+    }
+  }
+  .form_box{
+    margin: 0;
+    form{
+      .field{
+        width: 300px;
+        margin:0 auto;
+        padding:0;
+        p{
+          margin:10px 0 0 0;
+          text-align: left;
+        }
+        input{
+          height: 25px;
+          width: 300px;
+          border: 0.1px solid #ddd;
+          margin: 0;
+        }
+      }
+      .radio{
+        width:300px;
+        margin:10px auto 0 auto;
+        padding:0;
+        p{
+          margin:0;
+          text-align: left;
+        }
+        .radio_button{
+          text-align: left;
+          input{
+            margin: 0 5px 0 10px;
+          }
+          label{
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+
+      .select{
+      width:300px;
+      margin:0 auto;
+      padding:0;
+        p{
+        margin:12px 0 0 0;
+        text-align: left;
+        }
+        .birth_date_field{
+          text-align: left;
+          input{
+            margin: 0 5px 0 10px;
+          }
+        }
+      }
+
+      .submit{
+        margin:20px 0 0 0;
+        padding: 0;
+        .button{
+          width: 300px;
+          height: 30px;
+          color: #fff;
+          background-color: #00216f;
+          text-align: center;
+          border-style: none;
+          border-radius: 8px;
+          -moz-border-radius: 8px;
+          -webkit-border-radius: 8px;
+          cursor:pointer;
+        }
+        .button:hover{
+          opacity:0.7;
+        }
+      }
+    }
+  }
+  .more_link_box{
+    width:300px;
+    margin: 10px auto;
+    text-align: left;
+    a{
+      text-decoration: none;
+      color: #555;
+      font-size: 15px;
+    }
+    a:hover{
+      color: #999;
+    }
+  }
+}
+
+
+.registration_health_status{
+  width:100%;
+  text-align: center;
+  h2{
+    margin:20px 0 0 0;
+  }
+  .title_registration{
+    border-bottom: 3px solid #60a0cc;
+    text-align: left;
+    p{
+      margin: 0 auto 0 10px;
+    }
+  }
+  .form_box{
+    margin: 0;
+    form{
+      .field{
+        width: 300px;
+        margin:0 auto;
+        padding:0;
+        p{
+          margin:10px 0 0 0;
+          text-align: left;
+        }
+        input{
+          height: 25px;
+          width: 300px;
+          border: 0.1px solid #ddd;
+          margin: 0;
+        }
+      }
+
+      .text_area{
+        width: 300px;
+        margin:0 auto;
+        padding:0;
+        p{
+          margin:10px 0 0 0;
+          text-align: left;
+        }
+        textarea{
+          width: 300px;
+          height: 200px;
+          border: 0.1px solid #ddd;
+          margin: 0;
+        }
+      }
+
+      .radio{
+        width:300px;
+        margin:10px auto 0 auto;
+        padding:0;
+        p{
+          margin:0;
+          text-align: left;
+        }
+        .radio_button{
+          text-align: left;
+          input{
+            margin: 0 5px 0 10px;
+          }
+          label{
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+
+      .select{
+      width:300px;
+      margin:0 auto;
+      padding:0;
+        p{
+        margin:12px 0 0 0;
+        text-align: left;
+        }
+        .birth_date_field{
+          text-align: left;
+          input{
+            margin: 0 5px 0 10px;
+          }
+        }
+      }
+
+      .submit{
+        margin:20px 0 0 0;
+        padding: 0;
+        .button{
+          width: 300px;
+          height: 30px;
+          color: #fff;
+          background-color: #00216f;
+          text-align: center;
+          border-style: none;
+          border-radius: 8px;
+          -moz-border-radius: 8px;
+          -webkit-border-radius: 8px;
+          cursor:pointer;
+        }
+        .button:hover{
+          opacity:0.7;
+        }
+      }
+    }
+  }
+  a{
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+  }
+  a:hover{
+    color: #999;
+  }
+}
+
+
+
+
+.steps_and_fee{
+  width:auto;
+  margin: 30px auto 20px 7%;
+  div{
+    width:auto;
+    padding:0;
+    margin:0;
+    text-align: left;
+    div{
+      float:left;
+      width:50%;
+      .label{
+        font-size: 20px;
+      }
+      .steps_num{
+        margin:20px 0 0 0;
+        strong{
+          font-size: 30px;
+          margin-right: 10px;
+        }
+      }
+
+      .fee_num{
+        margin:20px 0 0 0;
+        strong{
+          font-size: 30px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+.record{
+  margin:30px 0 0 0;
+  border-top: 3px solid #60a0cc;
+  width: 100%;
+  p{
+    margin: 0px 0 0 10px;
+  }
+  form{
+    margin: 0 0 10px 0;
+    ul{
+      margin: 0;
+      li{
+        list-style: none;
+        margin:0;
+        font-size:20px;
+
+        label{
+          width: 200px;
+          margin: 0;
+          display:block;
+          float:left;
+          font-size: 18px;
+        }
+
+        .step{
+          height: 25px;
+          width: 80%;
+          border: 0.1px solid #ddd;
+          margin: 0;
+          padding:0;
+          font-size: 12px;
+        }
+
+        select{
+        width:80%;
+        height:30px;
+        // background-color: white;
+        border: 0.1px solid #ddd;
+        }
+      }
+    }
+
+    p {
+      margin: 20px 0 0 0;
+      text-align: center;
+      .btn{
+        font-size: 15px;
+        width: 95%;
+        height: 30px;
+        color:#fff;
+        background-color: #00216f;
+        text-align: center;
+        border-style: none;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        cursor:pointer;
+      }
+      .btn:hover{
+        opacity:0.7;
+      }
+    }
+  }
+  .written{
+    margin: 0 0 0 20px;
+    p{
+      margin: 10px 0 10px 0;
+    }
+    .rewrite{
+      .rewrite_btn{
+        text-decoration: none;
+        color: gray;
+      }
+    }
+  }
+}
+
+
+.edit{
+  margin:30px 0 0 0;
+  width: 100%;
+  border-top: 3px solid #60a0cc;
+  p{
+    margin: 0px 0 10px 10px;
+  }
+  form{
+    margin: 0 0 10px 0;
+    ul{
+      margin: 0;
+      li{
+        list-style: none;
+        margin:0;
+        font-size:20px;
+
+        label{
+          width: 200px;
+          margin: 0;
+          display:block;
+          float:left;
+          font-size: 18px;
+        }
+
+        .step{
+          height: 25px;
+          width: 80%;
+          border: 0.1px solid #ddd;
+          margin: 0;
+          padding:0;
+          font-size: 12px;
+        }
+
+        select{
+        width:80%;
+        height:30px;
+        // background-color: white;
+        border: 0.1px solid #ddd;
+        }
+      }
+    }
+
+    p {
+      margin: 20px 0 0 0;
+      text-align: center;
+      .btn{
+        font-size: 15px;
+        width: 95%;
+        height: 30px;
+        color:#fff;
+        background-color: #00216f;
+        text-align: center;
+        border-style: none;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        cursor:pointer;
+      }
+      .btn:hover{
+        opacity:0.7;
+      }
+    }
+  }
+  .written{
+    margin: 0 0 0 20px;
+    p{
+      margin: 10px 0 10px 0;
+    }
+    .rewrite{
+      .rewrite_btn{
+        text-decoration: none;
+        color: gray;
+      }
+    }
+  }
+}
+
+.update{
+  margin: 40px 0 0 10px;
+  p{
+    margin: 0 0 20px 0;
+  }
+  a{
+    text-decoration: none;
+    color:gray;
+  }
+}
+
+
+.page_title{
+  text-align: left;
+  margin: 30px 0 0 5px;
+  font-size: 20px;
+}
+
+
+
+.steps_detail {
+  border-top: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  width: 100%; /* ボックスの幅 */
+  padding: 0; /* ボックスのパディング */
+  text-align: left;
+  p{
+    margin: 0 auto 0 10px;
+  }
+  .graph{
+    margin:0 0 30px 0;
+    width: 100%;
+    .line_chart{
+    }
+  }
+}
+.fee_detail {
+  border-top: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  width: 100%; /* ボックスの幅 */
+  padding: 0; /* ボックスのパディング */
+  text-align: left;
+  p{
+    margin: 0 auto 0 10px;
+  }
+  .graph{
+    margin:0 0 30px 0;
+    width: 100%;
+    .line_chart{
+    }
+  }
+}
+
+
+
+
+
+
+/* --- ボックス --- */
+div.area {
+  border-top: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  width: 100%; /* ボックスの幅 */
+  padding: 0; /* ボックスのパディング */
+// background-color: #ffffff; /* ボックスの背景色 */
+  text-align: center;
+}
+
+/* --- マップボックス --- */
+div.area dl {
+margin: 0;
+// background: #eef7fe url(map_back.gif) repeat-x top; /* マップボックスの背景（グラデーション） */
+}
+
+/* --- タイトルエリア --- */
+div.area dt {
+  margin: 5px; /* タイトルエリアのマージン */
+  padding: 3px; /* タイトルエリアのパディング */
+  // background-color: #eef7fe; /* タイトルエリアの背景色 */
+  font-weight: bold; /* 太字 */
+  // color: #3d7eab; /* 文字色 */
+  font-size: 20px;
+}
+
+/* --- コメントエリア --- */
+div.area dd.description {
+margin: 10px 0; /* コメントエリアのマージン（上下、左右） */
+font-size: 80%; /* 文字サイズ */
+}
+
+/* --- マップエリア --- */
+div.area dd.map {
+margin: 20px 0; /* マップエリアのマージン（上下、左右） */
+}
+div.area dd.map img {
+border: none;
+width :320px;
+}
+
+
+
+div.purpose{
+  border-top: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  width:auto;
+  text-align: center;
+  // padding:3px;
+  dl {
+    margin:0;
+    dt{
+      margin:5px;
+      width:auto;
+      font-weight: bold; /* 太字 */
+      // color: #3d7eab;
+      font-weight: bold; /* 太字 */
+      font-size: 20px;
+    }
+    dd{
+      margin: 10px 0; /* コメントエリアのマージン（上下、左右） */
+      font-size: 80%; /* 文字サイズ */
+    }
+    .category{
+      div{
+        padding:0;
+        margin:25px 0 0 0;
+        h1{
+        }
+        ul{
+          padding: 0;
+          li{
+            list-style-type: none;
+            // text-align: center;
+            float:left;
+            width:20%;
+            img{
+              width:58px;
+            }
+            a{
+              text-decoration: none;
+              font-size: 50%;
+              color:gray;
+            }
+          }
+          li:hover{
+            opacity:0.5;
+          }
+        }
+        .clearFix:after{
+          display:block;
+          height:0;
+          clear:both;
+        }
+      }
+    }
+  }
+}
+
+
+
+div.keyword{
+  border-top: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  width:auto;
+  text-align: center;
+  dl{
+    margin:0;
+    dt{
+      margin: 5px;
+      width:auto;
+      font-weight: bold; /* 太字 */
+      // color: #3d7eab;
+      font-weight: bold; /* 太字 */
+    }
+    dd{
+      .search__query{
+        margin: 10px 0 0 0;
+        width:200px;
+        height:30px;
+        border: 0.1px solid #ddd;
+        margin: 0;
+      }
+      .btn-search{
+          width:60px;
+          height:35px;
+        }
+    }
+  }
+}
+
+.results_fitness{
+  .page_title{
+  border-bottom: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  }
+  .contents{
+    padding: 30px 0 0 0;
+    background-color: #fdfdff;
+    .fitness_content{
+      width: 90%;
+      max-width: 370px;
+      margin:15px auto;
+      border-radius: 8px;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      .link_box{
+        position:relative;
+        a{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          text-indent:-999px;
+        }
+        a:hover{
+          background-color:#FFF;
+          filter:alpha(opacity=50);
+          -moz-opacity: 0.5;
+          opacity: 0.4;
+        }
+        .fitness_image{
+        width: 100%;
+        height: 170px;
+        background-size: cover;
+        background-position: center 70%;
+        border-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px; 
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-topright: 8px;
+        -moz-border-bottom-right-radius: 0px;
+        -moz-border-bottom-left-radius: 0px;
+        }
+        .content{
+          border:solid 1px #CCC;
+          border-top: none;
+          -webkit-border-bottom-left-radius: 8px;
+          -webkit-border-bottom-right-radius: 8px;
+          -moz-border-bottom-left-radius: 8px;
+          -moz-border-bottom-right-radius: 8px;
+          background-color: white;
+          padding: 0 0 0 5px;
+          .name{
+          }
+          .price{
+            p{
+            font-size: 15px;
+            }
+            .price_fitness{
+              font-size:18px;
+            }
+          }
+          .access{
+            p{
+              font-size: 15px;
+            }
+          }
+          .coupon{
+            background-color: #f6ad9c;
+            font-size: 15px;
+            width: 125px;
+            text-align: center;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            margin: 0 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.results_checkup{
+  .page_title{
+  border-bottom: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  }
+  .contents{
+    padding: 30px 0 0 0;
+    background-color: #fdfdff;
+    .checkup_content{
+      width: 90%;
+      max-width: 370px;
+      margin:15px auto;
+      border-radius: 8px;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      .link_box{
+        position:relative;
+        a{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          text-indent:-999px;
+        }
+        a:hover{
+          background-color:#FFF;
+          filter:alpha(opacity=50);
+          -moz-opacity: 0.5;
+          opacity: 0.4;
+        }
+        .checkup_image{
+        width: 100%;
+        height: 170px;
+        background-size: cover;
+        background-position: center 70%;
+        border-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px; 
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-topright: 8px;
+        -moz-border-bottom-right-radius: 0px;
+        -moz-border-bottom-left-radius: 0px;
+        }
+        .content{
+          border:solid 1px #CCC;
+          border-top: none;
+          -webkit-border-bottom-left-radius: 8px;
+          -webkit-border-bottom-right-radius: 8px;
+          -moz-border-bottom-left-radius: 8px;
+          -moz-border-bottom-right-radius: 8px;
+          background-color: white;
+          padding: 0 0 0 5px;
+          .name{
+          }
+          .price{
+            p{
+            font-size: 15px;
+            }
+            .price_checkup{
+              font-size:18px;
+            }
+          }
+          .access{
+            p{
+              font-size: 15px;
+            }
+          }
+          .coupon{
+            background-color: #f6ad9c;
+            font-size: 15px;
+            width: 125px;
+            text-align: center;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            margin: 0 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.detail_fitness{
+  .fitness_image{
+    width: 100%;
+    height: 170px;
+    margin: 30px 0 0 0;
+    background-size: cover;
+    background-position: center 70%;
+  }
+  // .company{
+  //   ul{
+  //     list-style-type:none;
+  //     padding: 0;
+  //     li{
+  //       display: inline-block;
+  //     vertical-align: middle;
+  //     }
+  //     .company_logo{
+  //       min-height: 50px;
+  //       width:30%;
+  //       background-size: auto;
+  //       background: center top no-repeat;
+  //     }
+  //     .company_name{
+  //       height:100%;
+  //     }
+  //   }
+  // }
+  // .clearFix:after {
+  //   content: ".";
+  //   display: block;
+  //   height: 0;
+  //   clear: both;
+  //   visibility: hidden;
+  // }
+  .title{
+    border-bottom: 3px solid #60a0cc;
+    margin: 30px 0 0 0;
+    p{
+      margin: 0 auto 0 5px;
+    }
+  }
+  .detail{
+    font-size: 16px;
+    margin: 20px 10px 0 10px;
+  }
+  .price{
+    margin: 20px 10px 0 10px;
+    font-size: 16px;
+    p{
+      font-size: 16px;
+      strong{
+        font-size: 20px;
+        font-weight:normal;
+      }
+    }
+  }
+
+  .coupon{
+    font-size: 16px;
+    margin: 20px 10px 0 10px;
+  }
+  .company{
+    margin: 20px 10px 0 10px;
+    .company_name{
+    font-size: 16px;
+    }
+    .homepage{
+      text-decoration: none;
+      font-size: 16px;
+      color: gray;
+    }
+    .company_detail{
+        font-size: 16px;
+    }
+  }
+
+  .other_contents{
+    background-color: #fdfdff;
+    .fitness_content{
+      width: 90%;
+      max-width: 370px;
+      margin:15px auto;
+      border-radius: 8px;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      .link_box{
+        position:relative;
+        a{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          text-indent:-999px;
+        }
+        a:hover{
+          background-color:#FFF;
+          filter:alpha(opacity=50);
+          -moz-opacity: 0.5;
+          opacity: 0.4;
+        }
+        .fitness_image{
+        width: 100%;
+        height: 170px;
+        background-size: cover;
+        background-position: center 70%;
+        border-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px; 
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-topright: 8px;
+        -moz-border-bottom-right-radius: 0px;
+        -moz-border-bottom-left-radius: 0px;
+        }
+        .content{
+          border:solid 1px #CCC;
+          border-top: none;
+          -webkit-border-bottom-left-radius: 8px;
+          -webkit-border-bottom-right-radius: 8px;
+          -moz-border-bottom-left-radius: 8px;
+          -moz-border-bottom-right-radius: 8px;
+          background-color: white;
+          padding: 0 0 0 5px;
+          .name{
+          }
+          .price{
+            margin: 20px auto 0 0;
+            p{
+            font-size: 15px;
+            }
+            .price_fitness{
+              font-size:18px;
+            }
+          }
+          .access{
+            p{
+              font-size: 15px;
+            }
+          }
+          .coupon{
+            background-color: #f6ad9c;
+            font-size: 15px;
+            width: 125px;
+            text-align: center;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            margin: 0 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.detail_checkup{
+  .hospital_image{
+    width: 100%;
+    height: 170px;
+    margin: 30px 0 0 0;
+    background-size: cover;
+    background-position: center 70%;
+  }
+  .title{
+    border-bottom: 3px solid #60a0cc;
+    margin: 30px 0 0 0;
+    p{
+      margin: 0 auto 0 5px;
+    }
+  }
+  .detail{
+    font-size: 16px;
+    margin: 20px 10px 0 10px;
+  }
+  .price{
+    margin: 20px 10px 0 10px;
+    font-size: 16px;
+    p{
+      font-size: 16px;
+      strong{
+        font-size: 20px;
+        font-weight:normal;
+      }
+    }
+  }
+
+  .coupon{
+    font-size: 16px;
+    margin: 20px 10px 0 10px;
+  }
+  .access{
+    font-size: 16px;
+    margin: 20px 10px 0 10px;
+  }
+  .hospital{
+    margin: 20px 10px 0 10px;
+    .hospital_name{
+    font-size: 16px;
+    }
+    .homepage{
+      text-decoration: none;
+      font-size: 16px;
+      color: gray;
+    }
+    .hospital_detail{
+        font-size: 16px;
+    }
+  }
+
+  .other_contents{
+    background-color: #fdfdff;
+    .checkup_content{
+      width: 90%;
+      max-width: 370px;
+      margin:15px auto;
+      border-radius: 8px;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      .link_box{
+        position:relative;
+        a{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          text-indent:-999px;
+        }
+        a:hover{
+          background-color:#FFF;
+          filter:alpha(opacity=50);
+          -moz-opacity: 0.5;
+          opacity: 0.4;
+        }
+        .checkup_image{
+        width: 100%;
+        height: 170px;
+        background-size: cover;
+        background-position: center 70%;
+        border-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px; 
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-topright: 8px;
+        -moz-border-bottom-right-radius: 0px;
+        -moz-border-bottom-left-radius: 0px;
+        }
+        .content{
+          border:solid 1px #CCC;
+          border-top: none;
+          -webkit-border-bottom-left-radius: 8px;
+          -webkit-border-bottom-right-radius: 8px;
+          -moz-border-bottom-left-radius: 8px;
+          -moz-border-bottom-right-radius: 8px;
+          background-color: white;
+          padding: 0 0 0 5px;
+          .name{
+          }
+          .price{
+            margin: 20px auto 0 0;
+            p{
+            font-size: 15px;
+            }
+            .price_checkup{
+              font-size:18px;
+            }
+          }
+          .access{
+            p{
+              font-size: 15px;
+            }
+          }
+          .coupon{
+            background-color: #f6ad9c;
+            font-size: 15px;
+            width: 125px;
+            text-align: center;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            margin: 0 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<div class="detail_fitness">
+<!--   <div class="clearFix company">
+    <ul>
+     <li class="company_logo" style="background-image:url(<%= @company.logo_url %>)"></li>
+     <li class="company_name"><%= @company.name %></li>
+    </ul>
+  </div> -->
+  <div class="fitness_image" style="background-image:url(<%= @fitness.image_url %>)"></div>
+  <h1 class="title"><p><%= @fitness.name %></p></h1>
+  <p class="detail"><%= @fitness.detail %></p>
+
+  <h1 class="title"><p>料金</p></h1>
+  <div class="price">
+    <p>月額  <strong><%= @fitness.price %></strong> 円</p>
+    <p>入会費  <strong><%= @company.entrance_fee %></strong> 円</p>
+  </div>
+
+  <h1 class="title"><p>会員特典</p></h1>
+  <p class="coupon"><%= @fitness.coupon %></p>
+
+  <h1 class="title"><p>アクセス</p></h1>
+  <p class="coupon"><%= @company.access %></p>
+
+  <h1 class="title"><p>施設情報</p></h1>
+  <div class="company">
+    <p class="company_name"><%= @company.name %></p>
+    <%= link_to "#{@company.homepage}", "#{@company.homepage}", :class => "homepage" %>
+  </div>
+
+  <h1 class="title"><p>この施設のサービス</p></h1>
+  <div class="other_contents">
+    <% @company.fitnesses.each do |fitness| %>
+      <%= render partial: "fitness", locals: {fitness: fitness} %>
+    <% end %>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,32 @@
+<div class="detail_checkup">
+  <div class="hospital_image" style="background-image:url(<%= @hospital.image %>)"></div>
+  <h1 class="title"><p><%= @checkup.name %></p></h1>
+  <p class="detail"><%= @checkup.detail %></p>
+
+  <h1 class="title"><p>料金</p></h1>
+  <div class="price">
+    <p><strong><%= @checkup.price %></strong> 円 〜</p>
+  </div>
+
+  <h1 class="title"><p>会員特典</p></h1>
+  <p class="coupon"><%= @checkup.coupon %></p>
+
+  <h1 class="title"><p>アクセス</p></h1>
+  <p class="access"><%= @hospital.access %></p>
+
+  <h1 class="title"><p>施設情報</p></h1>
+  <div class="hospital">
+    <p class="hospital_name"><%= @hospital.name %></p>
+    <%= link_to "#{@hospital.homepage}", "#{@hospital.homepage}", :class => "homepage" %>
+  </div>
+
+  <h1 class="title"><p>この施設のサービス</p></h1>
+  <div class="other_contents">
+    <% @hospital.checkups.each do |checkup| %>
+      <%= render partial: "checkup", locals: {checkup: checkup} %>
+    <% end %>
+  </div>
+
+
+
+</div>

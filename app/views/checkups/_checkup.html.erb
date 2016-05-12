@@ -1,0 +1,16 @@
+<div class="checkup_content">
+  <div class="link_box">
+  <%= link_to "#{checkup.name}", "/checkups/#{checkup.id}", method: :get %>
+    <div class="checkup_image" style="background-image:url(<%= checkup.hospital.image %>)"></div>
+    <div class="content">
+      <h1 class="name"><%= checkup.name %></h1>
+      <div class="price">
+        <p>料金 : <strong class="price_checkup"><%= checkup.price %></strong> 円〜</p>
+      </div>
+      <div class="access">
+        <p>病院 : <%= checkup.hospital.name %></p>
+      </div>
+      <p class="coupon">会員限定特典あり</p>
+    </div>
+  </div>
+</div>

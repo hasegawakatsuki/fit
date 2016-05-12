@@ -1,0 +1,10 @@
+<h1 class="page_title">歩数記録</h1>
+
+<div class="fee_detail">
+  <div class="fee_graph">
+    <p>直近30日の保険料の推移</p>
+    <div class="graph">
+      <%= line_chart [{name:"あなた", data: @fee_data}] %>
+    </div>
+  </div>
+</div>
