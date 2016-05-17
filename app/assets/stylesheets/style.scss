@@ -14,19 +14,52 @@ h1, h2, h3, h4, h5, h6, p, body {
 
 header{
   background-color: #60a0cc;
+  // background-color: #0D3541;
   margin: 0;
   padding: 5px;
 }
 
-header h1{
-  text-align: center;
-  a{
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    // img{
-    //   height:35px;
+header{
+  padding: 10px;
+  .clearFix{
+    margin-right: 24px;
+    .slide-menu{
+      float:left;
+      img{
+        margin: 8px 0 auto 0;
+      }
+    }
+    h1{
+      text-align: center;
+      // a{
+      //   font-size: 36px;
+      //   color: white;
+      //   text-decoration: none;
+        img{
+          height:40px;
+        }
+      }
     // }
+  }
+}
+
+.sidr{
+  .active{
+    margin: 0 auto 0 15px;
+    p{
+      margin: 0 auto 0 30px;
+    }
+  }
+  li{
+    a{
+      float:left;
+    }
+    .name{
+      width:206px;
+    }
+    .slide-menu{
+      width:100%;
+    }
   }
 }
 
@@ -40,31 +73,40 @@ header h1{
     li{
       width: 20%; /* 項目の幅 */
       float: left;
-      padding:0;
+      padding:5px 2px 0 2px;
       margin:0;
       text-align: center;
+      border-bottom: 1px solid #eee;
+      border-left: 1px solid #ddd;
+      // box-shadow: 1px 0px 0px rgba(225,225,225,0.3) inset,
+      //      -1px 0px 0px rgba(225,225,225,0.3) inset,
+      //       0px 1px 1px rgba(0,0,0,0.1) inset,
+      //       0px -1px 1px rgba(0,0,0,0.3) inset,
+      //       0px 1px 3px #666;
       a{
         width:auto;
         color: #555;
         font-size: 10px;
         font-weight:bold;
         text-decoration: none;
-        padding:10px 0;
-        text-decoration:none;
         display:block;
         background: #fff;
-        border: 1px solid #aaa;
-          box-shadow: 1px 0px 0px rgba(225,225,225,0.3) inset,
-               -1px 0px 0px rgba(225,225,225,0.3) inset,
-                0px 1px 1px rgba(0,0,0,0.1) inset,
-                0px -1px 1px rgba(0,0,0,0.3) inset,
-                0px 1px 3px #666;
+        padding: 0 0 5px 0;
+        img{
+        }
       }
+    }
+    .mypage_nav{
+      width:19.3%;
+      border-left:none;
+    }
+    .fitness_nav{
+      width:20.7%;
     }
   }
 }
-.nav ul li a:hover{
-  background:#ddd;
+.nav ul li:hover{
+  opacity:0.5;
 }
 
 .clearFix:after {
@@ -163,25 +205,27 @@ footer{
     margin: 0;
   }
   .description{
-    margin: 10px 0 0 5px;
+    margin: 30px 0 0 5px;
     .concept{
+      margin: 0 auto 30px auto;
       h1{
         color:#33338B;
         font-size: 19px;
       }
       p{
-        font-size: 16px;
-        margin: 0 10px 0 5px;
+        font-size: 17px;
+        margin: 10px 10px 0 5px;
       }
     }
     .system{
+      margin: 0 auto 30px auto;
       h1{
         color:#33338B;
         font-size: 19px;
       }
       p{
         font-size: 16px;
-        margin: 0 10px 0 5px;
+        margin: 10px 10px 0 5px;
       }
     }
     .support{
@@ -192,15 +236,16 @@ footer{
       h2{
         font-size: 16px;
         font-weight:normal;
-        margin: 0 10px 0 5px;
+        margin: 10px 10px 0 5px;
       }
       p{
         font-size: 16px;
-        margin: 0 10px 0 20px;
+        margin: 5px 10px 0 20px;
       }
       .clearFix{
         padding:0;
         list-style-type:none;
+        margin:20px auto 0 auto;
         li{
           float:left;
           width:50%;
@@ -242,6 +287,7 @@ footer{
         width: 300px;
         margin:20px 0 0 0;
         border: 0.1px solid #ddd;
+        font-size: 15px;
       }
     }
     .row{
@@ -250,8 +296,11 @@ footer{
         margin: auto;
         padding: 0;
         text-align: left;
+        .check_box{
+        }
         .label{
-          font-size: 12px
+          font-size: 12px;
+          color:#555;
         }
       }
       .submit{
@@ -318,7 +367,7 @@ footer{
           height: 25px;
           width: 300px;
           border: 0.1px solid #ddd;
-          margin: 0;
+          margin: 0 auto 10px auto;
         }
       }
       .radio{
@@ -331,11 +380,12 @@ footer{
         }
         .radio_button{
           text-align: left;
+          margin: 5px auto 0 10px;
           input{
-            margin: 0 5px 0 10px;
+            margin: 0 auto 0 auto;
           }
           label{
-            margin: 0 10px 0 0;
+            margin: 0 auto 10px auto;
           }
         }
       }
@@ -345,11 +395,12 @@ footer{
       margin:0 auto;
       padding:0;
         p{
-        margin:12px 0 0 0;
+        margin:5px 0 0 0;
         text-align: left;
         }
         .birth_date_field{
           text-align: left;
+          margin: 0 auto 20px auto;
           input{
             margin: 0 5px 0 10px;
           }
@@ -523,6 +574,8 @@ footer{
       width:50%;
       .label{
         font-size: 20px;
+        color:#555;
+        padding: 0;
       }
       .steps_num{
         margin:20px 0 0 0;
@@ -562,26 +615,28 @@ footer{
 
         label{
           width: 200px;
-          margin: 0;
+          margin: 10px auto 0 auto;
           display:block;
           float:left;
           font-size: 18px;
         }
 
         .step{
-          height: 25px;
+          height: 30px;
           width: 80%;
           border: 0.1px solid #ddd;
-          margin: 0;
+          margin: 0 auto 10px auto;
           padding:0;
           font-size: 12px;
         }
 
-        select{
+        .training{
         width:80%;
         height:30px;
         // background-color: white;
         border: 0.1px solid #ddd;
+        font-size: 15px;
+        margin: 0 auto 10px auto;
         }
       }
     }
@@ -620,6 +675,20 @@ footer{
     }
   }
 }
+
+.recursion{
+  margin:30px 0 0 0;
+  border-top: 3px solid #60a0cc;
+  width: 100%;
+  p{
+    margin: 0px 0 0 10px;
+  }
+  form{
+    margin: 20px 0 10px 30px;
+  }
+}
+
+
 
 
 .edit{
@@ -660,6 +729,7 @@ footer{
         height:30px;
         // background-color: white;
         border: 0.1px solid #ddd;
+        font-size: 15px;
         }
       }
     }
@@ -726,7 +796,7 @@ footer{
   padding: 0; /* ボックスのパディング */
   text-align: left;
   p{
-    margin: 0 auto 0 10px;
+    margin: 0 auto 20px 10px;
   }
   .graph{
     margin:0 0 30px 0;
@@ -742,7 +812,7 @@ footer{
   padding: 0; /* ボックスのパディング */
   text-align: left;
   p{
-    margin: 0 auto 0 10px;
+    margin: 0 auto 20px 10px;
   }
   .graph{
     margin:0 0 30px 0;
@@ -751,6 +821,39 @@ footer{
     }
   }
 }
+
+.fee_trend {
+  border-top: 3px solid #60a0cc;
+  margin: 30px 0 0 0;
+  width: 100%; /* ボックスの幅 */
+  padding: 0; /* ボックスのパディング */
+  text-align: left;
+  p{
+    margin: 0 auto 0 10px;
+  }
+  .trend{
+    margin:30px 0;
+    width: 100%;
+    .clearFix{
+      list-style-type:none;
+      margin: 0 0 0 15px;
+      li{
+        float:left;
+        p{
+          margin:15px 20px auto 0;
+        }
+        img{
+          width:80%;
+        }
+      }
+      .yesterday{
+      margin: 0 20px 0 auto;
+      }
+    }
+  }
+}
+
+
 
 
 
@@ -825,6 +928,7 @@ div.purpose{
         padding:0;
         margin:25px 0 0 0;
         h1{
+          margin: 0 auto 15px auto;
         }
         ul{
           padding: 0;

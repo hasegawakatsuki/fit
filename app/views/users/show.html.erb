@@ -1,4 +1,9 @@
 <div class="steps_and_fee">
+  <% unless current_user.customer_id.present? %>
+    <%= form_tag(controller: :insurances, action: :registration, method: :post) do %>
+    <script src="https://checkout.webpay.jp/v1/" class="webpay-button" data-key="<%= WEBPAY_PUBLIC_KEY %>"></script>
+    <% end %>
+  <% end %>
   <div class="clearFix">
     <div class="steps">
       <p class="label">平均歩数</p>
@@ -31,7 +36,7 @@
         </li>
         <li>
           <%= f.label :その他運動 %>
-          <%= f.select :training, [["今日行った運動を選んで下さい",""],["筋トレ","muscle_training"],["ランニング","running"],["ストレッチ","stretch"],["その他スポーツ","sports"]] %>
+          <%= f.select :training, [["今日行った運動を選んで下さい",""],"筋トレ","ランニング","ストレッチ","その他スポーツ"],{},{class: "training"} %>
         </li>
       </ul>
           <p><%= button_tag type: "submit", class: "btn" do %>投稿する</p>
@@ -51,17 +56,24 @@
 
 <div class="graphs">
   <div class="steps_detail">
-    <p>直近30日の歩数推移</p>
+    <p>直近30日の歩数推移(k = 1000)</p>
     <div class="graph">
-      <%= line_chart [{name:"あなた", data: @step_data},{name:"平均", data: @ave_data} ] %>
+      <%= line_chart [{name:"あなた", data: @step_data},{name:"平均", data: @ave_data} ],colors: ["#d44","#44d"] %>
     </div>
   </div>
   <div class="fee_detail">
     <div class="fee_graph">
       <p>直近30日の保険料の推移</p>
       <div class="graph">
-        <%= line_chart [{name:"あなた", data: @fee_data}] %>
+        <%= line_chart [{name:"あなた", data: @fee_data}], colors: ["#d44"], min: current_user.insurances.minimum("fee"), max: current_user.insurances.maximum("fee")  %>
       </div>
     </div>
   </div>
+</div>
+
+<div class="recursion">
+  <p>お支払い方法</p>
+  <%= form_tag(controller: :insurances, action: :recursion, method: :post) do %>
+  <script src="https://checkout.webpay.jp/v1/" class="webpay-button" data-key="<%= WEBPAY_PUBLIC_KEY %>"></script>
+  <% end %>
 </div>

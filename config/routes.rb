@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :health_statuses
   resources :steps
-  resources :insurances, only: [:index,:show]
+  resources :insurances, only: [:index,:show] do
+    collection do
+      post 'recursion'
+      post 'registration'
+    end
+  end
   resources :checkups, only: :show do
     collection do
       get 'search'
@@ -21,4 +26,5 @@ Rails.application.routes.draw do
   end
 
   resources :tops, only: [:index]
+
 end

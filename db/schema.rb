@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510045229) do
+ActiveRecord::Schema.define(version: 20160517025620) do
 
   create_table "checkups", force: :cascade do |t|
     t.integer  "hospital_id", limit: 4
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20160510045229) do
     t.string   "name",                   limit: 255
     t.string   "sex",                    limit: 255
     t.date     "birth_date"
+    t.string   "customer_id",            limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

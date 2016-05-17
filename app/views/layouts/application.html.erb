@@ -16,43 +16,96 @@
 </head>
 <body>
   <header>
-    <h1><a href="/tops">Fit</a></h1> 
-    <!-- <h1><%= link_to image_tag('grayscale_logo.png'), tops_path %></h1> -->
-        <% if user_signed_in? %>
-        <div class="user_nav grid-6">
-          <%= link_to "ログアウトあとでけす", destroy_user_session_path, method: :delete %>
-        </div>
-      <% else %>
-        <div class="grid-6">
-          <%= link_to "ログイン後で消す", new_user_session_path, class: 'post' %>
-          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-        </div>
-      <% end %>
+    <div class="clearFix">
+      <a class="slide-menu" href="#sidr"><%= image_tag 'menu-button.png' %></a>
+      <!-- <h1><a href="/tops">Fit</a></h1> -->
+    <h1><%= link_to image_tag('grayscale_logo.png'), tops_path %></h1>
+    </div>
   </header>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.slide-menu').sidr({
+      name: 'sidr-menu',
+      side : 'left'
+    });
+});
+</script>
+<div id="sidr-menu">
+    <ul>
+        <% if user_signed_in? %>
+          <li class="active"><%= current_user.name %> さん</li>
+          <li class="clearFix">
+            <%= link_to image_tag('home-button.png'), user_path(current_user.id) %>
+            <%= link_to "マイページ", user_path(current_user.id),:class => "name" %></li>
+          <li class="clearFix">
+            <%= link_to image_tag('walking-button.png'), steps_path %>
+            <%= link_to "運動記録", steps_path, :class => "name" %>
+          </li>
+          <li class="clearFix">
+            <%= link_to image_tag('insurance-button.png'), insurances_path %>
+            <%= link_to "保険料記録", insurances_path, :class => "name" %>
+          </li>
+          <li class="clearFix">
+            <%= link_to image_tag('hospital-button.png'), search_checkups_path %>
+            <%= link_to "人間ドック・検診検索", search_checkups_path, :class => "name" %>
+          </li>
+          <li class="clearFix">
+            <%= link_to image_tag('gym-button.png'), search_fitnesses_path %>
+            <%= link_to "フィットネス検索", search_fitnesses_path, :class => "name" %>
+          </li>
+          <li class="clearFix">
+            <%= link_to image_tag('logout-button.png'), user_path(current_user.id) %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => "name" %>
+          </li>
+
+
+        <% else %>
+          <li class="clearFix">
+            <%= link_to image_tag('register-button.png'), new_user_registration_path %>
+            <%= link_to "新規登録", new_user_registration_path, :class => "name" %>
+          </li>
+          <li class="clearFix">
+            <%= link_to image_tag('login-button.png'), new_user_session_path %>
+            <%= link_to "ログイン", new_user_session_path,  :class => "name" %></li>
+        <% end %>
+        <li class="clearFix"><a class="slide-menu" href="#sidr">閉じる</a></li>
+    </ul>
+</div>
+
+
+
   <div class="nav">
     <ul class="clearFix">
       <% if user_signed_in? %>
-      <li class="header-nav__list-item nav_top">
+      <li class="header-nav__list-item nav_top mypage_nav">
+        <%= link_to image_tag('home-button.png'), user_path(current_user.id) %>
         <%= link_to 'マイページ', user_path(current_user.id) %>
       </li>
       <% else %>
-      <li class="header-nav__list-item nav_top">
+      <li class="header-nav__list-item mypage_nav">
+        <%= link_to image_tag('home-button.png'), new_user_session_path %>
         <%= link_to 'マイページ', new_user_session_path %>
       </li>
       <% end %>
       <li class="header-nav__list-item nav_note">
+        <%= link_to image_tag('walking-button.png'), steps_path %>
         <%= link_to '運動記録', '/steps' %>
       </li>
 
       <li class="header-nav__list-item nav_record">
+        <%= link_to image_tag('insurance-button.png'), insurances_path %>
         <%= link_to '保険料記録', '/insurances' %>
       </li>
 
       <li class="header-nav__list-item nav_trainer">
+      <%= link_to image_tag('hospital-button.png'), search_checkups_path %>
         <%= link_to '人間ドック', '/checkups/search' %>
       </li>
 
-      <li class="header-nav__list-item nav_plan">
+      <li class="header-nav__list-item nav_plan fitness_nav">
+        <%= link_to image_tag('gym-button.png'), search_fitnesses_path %>
         <%= link_to 'フィットネス', '/fitnesses/search' %>
       </li>
     </ul>

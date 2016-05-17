@@ -8,7 +8,7 @@
       </li>
       <li>
         <%= f.label :その他運動 %>
-        <%= f.select :training, [["今日行った運動を選んで下さい",""],["筋トレ","muscle_training"],["ランニング","running"],["ストレッチ","stretch"],["その他スポーツ","sports"]] %>
+        <%= f.select :training, [["今日行った運動を選んで下さい",""],"筋トレ","ランニング","ストレッチ","その他スポーツ"],{},{class: "training"} %>
       </li>
     </ul>
         <p><%= button_tag type: "submit", class: "btn" do %>修正する</p>

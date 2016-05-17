@@ -1,10 +1,102 @@
-<h1 class="page_title">歩数記録</h1>
+<h1 class="page_title">保険料記録</h1>
 
 <div class="fee_detail">
   <div class="fee_graph">
     <p>直近30日の保険料の推移</p>
     <div class="graph">
-      <%= line_chart [{name:"あなた", data: @fee_data}] %>
+      <%= line_chart [{name:"あなた", data: @fee_data}],colors: ["#d44"], min: current_user.insurances.minimum("fee"), max: current_user.insurances.maximum("fee") %>
     </div>
   </div>
+</div>
+
+
+<div class="fee_trend">
+  <p>保険料変化のトレンド</p>
+  <% if @first_fee.fee > @last_fee.fee  then %>
+    <div class="trend">
+      <ul class="clearFix">
+        <li><p>契約時から現在まで</p></li>
+        <li><%= image_tag "down_arrow_red.png" %></li>
+      </ul>
+    </div>
+  <% elsif @first_fee.fee == @last_fee.fee  then %>
+    <div class="trend">
+      <ul class="clearFix">
+        <li><p>契約時から現在まで</p></li>
+        <li><%= image_tag "side_arrow_green.png" %></li>
+      </ul>
+    </div>
+  <% elsif @first_fee.fee < @last_fee.fee  then %>
+    <div class="trend">
+      <ul class="clearFix">
+        <li><p>契約時から現在まで</p></li>
+        <li><%= image_tag "up_arrow_blue.png" %></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @lastmonth_fee != 0 then %>
+    <% if @lastmonth_fee > @last_fee.fee  then %>
+      <div class="trend">
+        <ul class="clearFix">
+          <li><p>30日前から現在まで</p></li>
+          <li><%= image_tag "down_arrow_red.png" %></li>
+        </ul>
+      </div>
+    <% elsif @lastmonth_fee == @last_fee.fee  then %>
+      <div class="trend">
+        <ul class="clearFix">
+          <li><p>30日前から現在まで</p></li>
+          <li><%= image_tag "side_arrow_green.png" %></li>
+        </ul>
+      </div>
+    <% elsif @lastmonth_fee < @last_fee.fee  then %>
+      <div class="trend">
+        <ul class="clearFix">
+          <li><p>30日前から現在まで</p></li>
+          <li><%= image_tag "up_arrow_blue.png" %></li>
+        </ul>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="trend">
+      <ul class="clearFix">
+        <li><p>30日前から現在まで</p></li>
+        <li><%= image_tag "side_arrow_green.png" %></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @yesterday_fee != 0 then %>
+    <% if @yesterday_fee > @last_fee.fee  then %>
+      <div class="trend">
+        <ul class="clearFix">
+          <li class="yesterday"><p>昨日から現在まで</p></li>
+          <li><%= image_tag "down_arrow_red.png" %></li>
+        </ul>
+      </div>
+    <% elsif @yesterday_fee == @last_fee.fee  then %>
+      <div class="trend">
+        <ul class="clearFix">
+          <li class="yesterday"><p>昨日から現在まで</p></li>
+          <li><%= image_tag "side_arrow_green.png" %></li>
+        </ul>
+      </div>
+    <% elsif @yesterday_fee < @last_fee.fee  then %>
+      <div class="trend">
+        <ul class="clearFix">
+          <li class="yesterday"><p>昨日から現在まで</p></li>
+          <li><%= image_tag "up_arrow_blue.png" %></li>
+        </ul>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="trend">
+      <ul class="clearFix">
+        <li class="yesterday"><p>昨日から現在まで</p></li>
+        <li><%= image_tag "side_arrow_green.png" %></li>
+      </ul>
+    </div>
+  <% end %>
+
 </div>
