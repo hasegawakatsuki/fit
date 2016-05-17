@@ -18,6 +18,7 @@ class InsurancesController < ApplicationController
     customer = webpay.customer.create(card: params['webpay-token'])
     @user = User.find(current_user.id)
     @user.update(customer_id: customer.id)
+    redirect_to controller: :users, action: :show
   end
 
 
@@ -31,6 +32,7 @@ class InsurancesController < ApplicationController
        period: :month,
        description: "Fit保険料"
     )
+    redirect_to controller: :users, action: :show
   end
 
 end

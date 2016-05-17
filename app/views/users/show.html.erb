@@ -1,9 +1,4 @@
 <div class="steps_and_fee">
-  <% unless current_user.customer_id.present? %>
-    <%= form_tag(controller: :insurances, action: :registration, method: :post) do %>
-    <script src="https://checkout.webpay.jp/v1/" class="webpay-button" data-key="<%= WEBPAY_PUBLIC_KEY %>"></script>
-    <% end %>
-  <% end %>
   <div class="clearFix">
     <div class="steps">
       <p class="label">平均歩数</p>
@@ -70,6 +65,16 @@
     </div>
   </div>
 </div>
+
+<% unless current_user.customer_id.present? %>
+  <div class="recursion">
+    <p>カード情報を登録して下さい。</p>
+      <%= form_tag(controller: :insurances, action: :registration, method: :post) do %>
+      <script src="https://checkout.webpay.jp/v1/" class="webpay-button" data-key="<%= WEBPAY_PUBLIC_KEY %>"></script>
+      <% end %>
+  </div>
+<% end %>
+
 
 <div class="recursion">
   <p>お支払い方法</p>
