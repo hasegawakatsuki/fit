@@ -1,8 +1,8 @@
 <div class="tops">
-  <%=  image_tag "tops_running.jpg", :name=>"exercise",:class => "exercise_image" %>
+  <%=  image_tag "tops_running.jpg", :name=>"exercise",:class => "exercise_image"%>
 
   <script>
-    img = new Array("/assets/tops_running.jpg","/assets/tops_swimming.jpg","/assets/tops_walking.jpg"); //*1
+    img = new Array("<%= asset_path "tops_running.jpg"%>","<%= asset_path "tops_swimming.jpg"%>", "<%= asset_path "tops_walking.jpg" %> "); //*1
     count = -1; //*2
     imgTimer();
   </script>
