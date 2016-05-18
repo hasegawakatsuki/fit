@@ -45,9 +45,16 @@ require "csv"
 #   Step.create(user_id: row[1], step_num: row[2], training: row[3])
 
 
+# users_csv = CSV.readlines("db/users.csv")
+# users_csv.shift
+# users_csv.each do |row|
+#   User.create(email: row[1], encrypted_password: row[2], reset_password_token: row[3],reset_password_sent_at: row[4], remember_created_at: row[5], sign_in_count: row[6],current_sign_in_at: row[7], last_sign_in_at: row[8],current_sign_in_ip: row[9],last_sign_in_ip: row[10], name: row[13], sex: row[14],birth_date: row[15],customer_id: row[16])
+
+
 users_csv = CSV.readlines("db/users.csv")
 users_csv.shift
 users_csv.each do |row|
-  User.create(email: row[1], encrypted_password: row[2], reset_password_token: row[3],reset_password_sent_at: row[4], remember_created_at: row[5], sign_in_count: row[6],current_sign_in_at: row[7], last_sign_in_at: row[8],current_sign_in_ip: row[9],last_sign_in_ip: row[10], name: row[13], sex: row[14],birth_date: row[15],customer_id: row[16])
+  User.create(email: row[1], encrypted_password: row[2], reset_password_token: row[3], reset_password_sent_at: row[4], remember_created_at: row[5], sign_in_count: row[6], current_sign_in_at: row[7], last_sign_in_at: row[8], current_sign_in_ip: row[9], last_sign_in_ip: row[10], name: row[13], sex: row[14], birth_date: row[15], customer_id: row[16])
+
 
 end
