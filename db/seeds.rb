@@ -23,9 +23,14 @@ require "csv"
 # fitnesses_csv.each do |row|
 #   Fitness.create(company_id: row[1], name: row[2], detail: row[3], price: row[4], place: row[5], image_url: row[8], coupon: row[9])
 
-health_statuses_csv = CSV.readlines("db/health_statuses.csv")
-health_statuses_csv.shift
-health_statuses_csv.each do |row|
-  HealthStatus.create(user_id: row[1], medical_history: row[2], illness: row[3], weight: row[4], height: row[5], blood_pressure: row[6], fat_percentage: row[7])
+# health_statuses_csv = CSV.readlines("db/health_statuses.csv")
+# health_statuses_csv.shift
+# health_statuses_csv.each do |row|
+#   HealthStatus.create(user_id: row[1], medical_history: row[2], illness: row[3], weight: row[4], height: row[5], blood_pressure: row[6], fat_percentage: row[7])
+
+hospitals_csv = CSV.readlines("db/hospitals.csv")
+hospitals_csv.shift
+hospitals_csv.each do |row|
+  Hospital.create(name: row[1], place: row[2], detail: row[3], homepage: row[4], image: row[5], tel: row[8], access: row[9])
 
 end
