@@ -49,4 +49,5 @@ users_csv = CSV.readlines("db/users.csv")
 users_csv.shift
 users_csv.each do |row|
   User.create(email: row[1], encrypted_password: row[2], reset_password_token: row[3],reset_password_sent_at: row[4], remember_created_at: row[4], sign_in_count: row[5],current_sign_in_at: row[6], last_sign_in_at: row[7],current_sign_in_ip: row[8],last_sign_in_ip: row[9], name: row[12], sex: row[13],birth_date: row[14],customer_id: row[15])
+
 end
