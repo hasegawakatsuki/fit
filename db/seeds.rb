@@ -14,8 +14,16 @@ require "csv"
 #   Checkup.create(hospital_id: row[1], name: row[2], detail: row[3], price: row[4], coupon: row[7],)
 # end
 
-companies_csv = CSV.readlines("db/companies.csv")
-companies_csv.shift
-companies_csv.each do |row|
-  Company.create(name: row[1], homepage: row[2], access: row[5], logo_url: row[6], entrance_fee: row[7], detail: row[8])
+# companies_csv = CSV.readlines("db/companies.csv")
+# companies_csv.shift
+# companies_csv.each do |row|
+#   Company.create(name: row[1], homepage: row[2], access: row[5], logo_url: row[6], entrance_fee: row[7], detail: row[8])
+# end
+
+
+
+fitnesses_csv = CSV.readlines("db/fitnesses.csv")
+fitnesses_csv.shift
+fitnesses_csv.each do |row|
+  Fitness.create(company_id: row[1], name: row[2], detail: row[3], price: row[4], place: row[5], image_url: row[8], coupon: row[9])
 end
