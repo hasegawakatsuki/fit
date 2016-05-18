@@ -56,3 +56,4 @@ end
 gem 'chartkick'
 gem 'groupdate'
 gem 'webpay'
+gem 'mechanize'
