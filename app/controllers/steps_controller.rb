@@ -28,7 +28,6 @@ class StepsController < ApplicationController
     }
 
 
-
     @step_ex = current_user.steps.where(created_at: (30.days.ago)..(Time.now))
     @step_exvalue = ((@step_ex.sum(:step_num) * 0.6)/4000)*3
 

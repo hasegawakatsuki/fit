@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       @ave_data[key] = value
     }
 
-    @pre_fee = current_user.insurances.where(created_at: (30.days.ago)..(Time.now)).group('date(created_at)').sum(:fee)
+    @pre_fee = current_user.insurances.where(created_at: (30.days.ago)..(Time.now)).group('date(created_at)').average(:fee)
     @fee_data = Hash.new()
     @pre_fee.each{|key, value|
       key = key.strftime('%Y/%m/%d')
